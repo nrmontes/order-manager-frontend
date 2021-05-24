@@ -1,0 +1,40 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Manager</title>
+
+    <link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+    <form class="form" action="">
+        <div class="card">
+            <div class="card-top">
+                <h2 class="title">Order Manager</h2>
+            </div>
+            <div class="card-group">
+                <label>Email</label>
+                <input #email email type="email" name="email" placeholder="Your email" required>
+            </div>
+            <div *ngIf="!email." class="alert alert-warning" role="alert">Email field cannot be empty</div>
+            <div class="alert alert-warning" role="alert">Please, type a valid email</div>
+            <div class="card-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Your password" required>
+            </div>
+            <div class="alert alert-warning" role="alert">Password field cannot be empty</div>
+            <div class="alert alert-danger" role="alert">Email or password doesn't match</div>
+            <div >
+                <button (click)="clickLogin()" class="btn-1" type="btn">LOGIN</button>
+            </div>
+            
+            <div class="signup">
+                <h4> Are you new here?</h4>
+                <button (click)="clickRegister()" class="btn-2" type="btn">Sign Up</button>
+            </div>
+       </div> 
+    </form>
+   
+</body>
+</html>
